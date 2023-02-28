@@ -1,5 +1,5 @@
 body{
-    background-image: url(https://i.postimg.cc/zff4L4Br/superheroo.jpg);
+    background-image: url(https://wallpapercave.com/wp/wp8610811.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -8,21 +8,26 @@ body{
     width: 53%;
     height: 3rem;
     margin: 0 auto;
+    text-align: center;
     font-size: 1.3rem;
     margin-bottom: 1rem;
-    color: black;
+    color: #6e6e6e;
     padding-left: 2%;
     background-color: whitesmoke;
+    border-radius: 15px;
 }
 #main-heading{
     text-align: center;
     font-size: 30px;
-    color: rosybrown;
-    background-color: black;
+    color: whitesmoke;
+    background:linear-gradient(to right,orange,blue);
     padding: 20px;
     margin-left: 50px;
     margin-right: 50px;
+    border-radius: 10px;
 }
+
+
 
 .image-size{
     width: 70px;
