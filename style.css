@@ -1,9 +1,22 @@
-body{
-    background-image: url(https://w0.peakpx.com/wallpaper/721/562/HD-wallpaper-anime-vs-dc-and-marvel-superman-hulk-captain-marvel-superheroes-deviantart-artist-artwork.jpg);
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,600&display=swap');
+*{
+    font-family: 'Kanit', sans-serif;
+    text-decoration: none;
+
+}
+
+body {
+    background-image: url("https://images.wallpapersden.com/image/download/batman-and-the-flash-dc-comics_a2Zna2qUmZqaraWkpJRnamtlrWZpaWU.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
-#searchHero{
+#head {
+    display:flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#searchHero {
     display: block;
     width: 53%;
     height: 3rem;
@@ -14,57 +27,55 @@ body{
     color: #6e6e6e;
     padding-left: 2%;
     background-color: whitesmoke;
-    border-radius: 15px;
+    border-radius: 30px;
+    border: none;
 }
-#main-heading{
+
+#main-heading {
     text-align: center;
     font-size: 30px;
     color: whitesmoke;
-    background:linear-gradient(to right,orange,blue);
+    background: linear-gradient(to right, orange, blue);
     padding: 20px;
     margin-left: 50px;
     margin-right: 50px;
-    border-radius: 10px;
+    border-radius: 25px;
 }
 
 
 
-.image-size{
+.image-size {
     width: 70px;
     height: 70px;
     margin-left: 2rem;
 }
-#searchResults{
-    background: rgba(226, 236, 226, 0.5)
-}
 
-ul{
+
+ul {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    border: 2px solid rgb(241, 234, 234);
     overflow: scroll;
     height: 60vh;
     width: 50%;
     margin: 0 auto;
-    background-color: whitesmoke;
-    
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     display: none;
 }
 
 
-ul li{
+ul li {
     width: 90%;
     display: flex;
     justify-content: space-between;
     margin-bottom: 0.5rem;
-    
+
 }
 
-button{
+button {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -75,23 +86,45 @@ button{
     background-color: brown;
     color: white;
 }
-#delFav{
+
+#delFav {
     color: red;
     font-size: 25px;
 }
-#delFav:hover{
-    cursor:pointer;
+
+#delFav:hover {
+    cursor: pointer;
 }
-#addFav:hover{
-    cursor:pointer;
+
+#addFav:hover {
+    cursor: pointer;
 }
-#addFav{
+
+#addFav {
     font-size: 25px;
     color: lightgray;
 }
-.search-item a{
+
+.search-item a {
     width: 60%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     text-decoration: none;
+    /*color: #fff;*/  
+    font-size: 20px;  
+}
+
+.search-item {
+    background-color: #1b1d26;
+    color: wheat;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.favourite-heroes{
+    color: white;
+}
+.favourite-heroes:hover{
+    color: blue;
 }
