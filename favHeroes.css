@@ -9,6 +9,8 @@ body{
     display: flex;
     justify-content:space-evenly;
     flex-wrap: wrap;
+    background-color: lightgoldenrodyellow;
+    border-radius: 10px;
 }
 
 .favImage{
@@ -51,6 +53,7 @@ div a{
 .removeFav{
     padding: 1px;
     border: 2px solid black;
+
 }
 .removeFav:hover{
     cursor: pointer;

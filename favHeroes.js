@@ -10,7 +10,7 @@ if(favHeroes.length == 0){
 }else{
     for(let i of favHeroes){
         let div = document.createElement('div');
-        div.innerHTML = '<img src="'+i.photoUrl+'" alt="" class="favImage"><h3>'+i.name+'</h3><div class="removeFav" data-id="'+i.id+'">delete</div>';
+        div.innerHTML = '<img src="'+i.photoUrl+'" alt="" class="favImage"><h3>'+i.name+'</h3><div class="removeFav" data-id="'+i.id+'">DELETE</div>';
         favHeroContainer.appendChild(div);
     }
     
