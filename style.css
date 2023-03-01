@@ -1,5 +1,5 @@
 body{
-    background-image: url(https://wallpapercave.com/wp/wp8610811.jpg);
+    background-image: url(https://w0.peakpx.com/wallpaper/721/562/HD-wallpaper-anime-vs-dc-and-marvel-superman-hulk-captain-marvel-superheroes-deviantart-artist-artwork.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }
@@ -34,18 +34,22 @@ body{
     height: 70px;
     margin-left: 2rem;
 }
+#searchResults{
+    background: rgba(226, 236, 226, 0.5)
+}
 
 ul{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-start;
-    border: 2px solid black;
+    border: 2px solid rgb(241, 234, 234);
     overflow: scroll;
     height: 60vh;
     width: 50%;
     margin: 0 auto;
-    background-color: white;
+    background-color: whitesmoke;
+    
 }
 ::-webkit-scrollbar{
     display: none;
