@@ -1,17 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,600&display=swap');
-*{
+
+* {
     font-family: 'Kanit', sans-serif;
     text-decoration: none;
 
 }
+.add{
+    display: flex;
+    align-items: center;
+}
 
 body {
-    background-image: url("./img.jpg");
+    background-image: url("./spidey4.jpg");
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 #head {
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
@@ -29,6 +35,22 @@ body {
     background-color: whitesmoke;
     border-radius: 30px;
     border: none;
+}
+
+.searchbar input[type="search"] {
+    background-image: url("./search.png");
+    background-position: 5px center;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+}
+
+.searchbar span {
+    opacity: 0.4;
+    position: absolute;
 }
 
 #main-heading {
@@ -111,8 +133,8 @@ button {
     justify-content: space-between;
     align-items: center;
     text-decoration: none;
-    /*color: #fff;*/  
-    font-size: 20px;  
+    /*color: #fff;*/
+    font-size: 20px;
 }
 
 .search-item {
@@ -122,9 +144,18 @@ button {
     border-radius: 10px;
 }
 
-.favourite-heroes{
-    color: white;
+.favourite-heroes {
+    color: orangered;
 }
-.favourite-heroes:hover{
-    color: blue;
+
+.favourite-heroes:hover {
+    color: wheat;
+}
+
+.homepage {
+    color: orangered;
+}
+
+.homepage:hover {
+    color: wheat;
 }

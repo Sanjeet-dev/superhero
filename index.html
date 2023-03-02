@@ -1,36 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comics unlimited</title>
+    <title>METAHUMANS HUNTER</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
 
     <div class="container">
-        
+
         <div id="head">
-            <a href="./index.html"><h2>METAHUMANS HUNTER</h2>
-            <a href="./favHeroes.html" class="favourite-heroes"><h2>FAVOURITE LIST</h2></a>
+            <a href="./index.html" class="homepage">
+                <h2>METAHUMANS HUNTER</h2>
+                <a href="./favHeroes.html" class="favourite-heroes">
+                    <h2>FAVOURITE LIST</h2>
+                </a>
         </div>
 
-        
-    
+
+
         <p id="main-heading">THE WORLD OF COMIC CHARACTERS</p>
-    
-    
+
+
         <div id="data-container">
-            <input type="search" name="searchHero" id="searchHero" placeholder="SEARCH CHARACTERS  (MINIMUM 3 WORDS)">
-    
-            <ul id="searchResults">      
+            <div class="searchbar">
+                <!--<span class="material-symbols-outlined">search</span>-->
+                <input type="search" name="searchHero" id="searchHero"
+                    placeholder="SEARCH CHARACTERS  (MINIMUM 3 WORDS)">
+            </div>
+
+            <ul id="searchResults">
             </ul>
         </div>
-    
-        
+
+
     </div>
     <script src="index.js"></script>
 </body>
+
 </html>

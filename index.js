@@ -4,47 +4,49 @@ const searchResults = document.getElementById("searchResults");
 var favourite_buttons = [];
 
 // for fetching the api thorugh xhr request
-searchHero.addEventListener("keyup", function(){
+searchHero.addEventListener("keyup", function () {
     var xhrRequest = new XMLHttpRequest();
     var searchValue = this.value;
-    if(searchValue.length <= 2){
+    if (searchValue.length <= 2) {
         searchResults.innerHTML = "";
         return;
     }
-    xhrRequest.onreadystatechange = function() {
+    xhrRequest.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             const response = JSON.parse(xhrRequest.responseText);
-            if(response.response === "error"){
+            if (response.response === "error") {
                 searchResults.innerHTML = "";
                 return;
             }
             const results = response.results
+            // const biography = response.biography;
+            // console.log(response.results[0].biography);
             searchResults.innerHTML = "";
 
-            for(let i of results){
+            for (let i of results) {
                 var li = document.createElement("li");
                 li.classList.add("search-item");
-                li.innerHTML = '<a href="" class="searchResults" id="'+i.id+'">'+i.name+'<img src="'+i.image.url+'" alt="" class="image-size"></a></><div class ="add" id="'+i.id+'" data-name="'+i.name+'" data-photo="'+i.image.url+'"><i id="addFav" class="fa fa-heart"></i></div>';
+                li.innerHTML = '<a href="" class="searchResults" id="' + i.id + '">' + i.name + '<img src="' + i.image.url + '" alt="" class="image-size"></a></><div class ="add" id="' + i.id + '" data-name="' + i.name + '" data-photo="' + i.image.url + '"><i id="addFav" class="fa fa-heart"></i></div>';
                 searchResults.appendChild(li);
             }
 
             let resultHeros = document.getElementsByClassName("searchResults");
-                for(let j of resultHeros){
-                    j.addEventListener("click", function(event){
-                        event.preventDefault();
-                        console.log(this.id);
-                        localStorage.setItem('heroSelected', this.id);
-                        location.replace("./heroDetails.html");
-                    });
-                }
+            for (let j of resultHeros) {
+                j.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    // console.log(this.id);
+                    localStorage.setItem('heroSelected', this.id);
+                    location.replace("./heroDetails.html");
+                });
+            }
 
-                // adding suerhero to the fav list
+            // adding suerhero to the fav list
             favourite_buttons = document.getElementsByClassName("add");
-            for(let i of favourite_buttons){
-                i.addEventListener("click", function(){
-                    if(i.innerHTML == '<i id="delFav" class="fa fa-heart"></i>'){
+            for (let i of favourite_buttons) {
+                i.addEventListener("click", function () {
+                    if (i.innerHTML == '<i id="delFav" class="fa fa-heart"></i>') {
                         i.innerHTML = '<i id="addFav" class="fa fa-heart"></i>'
-                        function remove(value){
+                        function remove(value) {
                             return this.id != value.id;
                         }
                         // saving the data in local storage
@@ -64,10 +66,10 @@ searchHero.addEventListener("keyup", function(){
                     localStorage.setItem('favHeroes', JSON.stringify(oldItems));
                 });
             }
-            
+
         }
     };
-    xhrRequest.open("GET", "https://www.superheroapi.com/api.php/3383566708344630/search/"+searchValue, true);
+    xhrRequest.open("GET", "https://www.superheroapi.com/api.php/3505074639705186/search/" + searchValue, true);
     xhrRequest.send();
 });
 
